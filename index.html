@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Chart</title>
+    <script src="anychart/js/anychart-core.min.js"></script>
+    <script src="anychart/js/anychart-stock.min.js"></script>
+    <script src="anychart/locales/vi-vn.js"></script>
+    <script src="anychart/js/anychart-cartesian.min.js"></script>
+    <script src="anychart/js/anychart-ui.min.js"></script>
+    <script src="anychart/themes/dark_earth.min.js"></script>
+    <script src="anychart/js/anychart-exports.min.js"></script>
+    <script
+        src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="anychart/css/anychart-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="anychart/fonts/css/anychart-font.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylechart.css">
+</head>
+
+<body>
+    <div class="d-flex" style="gap: 25px;">
+        <div style="height: 500px; width:50%;">
+            <div class="d-flex justify-content-between align-items-center pt-3 pl-3">
+                <div class="selector">
+                    <button type="button" id="1M" class="btn btn-link separate"
+                        onclick="selector('1M',this.id)">1M</button>
+                    <button type="button" id="3M" class="btn btn-link separate" onclick="selector('3M')">3M</button>
+                    <button type="button" id="6M" class="btn btn-link separate" onclick="selector('6M')">6M</button>
+                    <button type="button" id="1Y" class="btn btn-link separate" onclick="selector('1Y')">1Y</button>
+                    <!-- <button type="button" class="btn btn-link" onclick="selector('5Y')">5Y</button> -->
+                    <button type="button" id="MAX" class="btn btn-link" onclick="selector('MAX')">ALL</button>
+                </div>
+                <div id="rangepicker"></div>
+            </div>
+            <div id="chart" class="box-shadow-chart mx-3 mt-3"> </div>
+        </div>
+        <div style="height: 500px; width:50%;">
+            <div id="chart_conbined" class="box-shadow-chart mt-5 mr-3"></div>
+        </div>
+    </div>
+
+    <div id="chart_pie" class="box-shadow-chart" style="height: 500px; width:50%; margin: 80px 0 10px 10px;"></div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
